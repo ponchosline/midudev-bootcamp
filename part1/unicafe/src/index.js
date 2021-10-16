@@ -12,7 +12,9 @@ const Boton = (props) => {
 const Estadistica = (props) => {
   return(
     <div>
+      <td>
       {props.text} {props.value}
+      </td>
     </div>
   )
 }
@@ -25,12 +27,14 @@ const Estadisticas = (props) => {
   }
   return(
   <div>
+    <table>
     <Estadistica text="Bueno" value={props.b} />
     <Estadistica text="Neutral" value={props.n} />
     <Estadistica text="Malo" value={props.m} />
     <Estadistica text="Todos" value={todos} />
     <Estadistica text="Promedio" value={prom} />
     <Estadistica text="Porcentaje positivos" value={(porc + " %")} />
+    </table>
     </div>
   )
 }
